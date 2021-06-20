@@ -8,6 +8,7 @@ router.get("/", async (req, res) => {
     });
     if(products.length === 0) {
       res.status(404).json({message: "No products found"});
+      return;
     }
     res.status(200).json(products);
   }
@@ -22,12 +23,13 @@ router.get("/:id", async (req, res) => {
       include:[{model: Category}, {model: Tag, through: ProductTag}]
     });
     if(!product) {
-      res.status(404).json({message: "No product found"});
+      res.status(404).json("No product found");
+      return;
     }
     res.status(200).json(product);
   }
   catch(e) {
-    res.status(500).json(e.message);
+    res.status(500).json(e);
   }
 });
 
@@ -113,6 +115,7 @@ router.delete("/:id", async (req, res) => {
     });
     if(!product) {
       res.status(404).json("No product with this id");
+      return;
     }
     res.status(200).json(product);
   }
