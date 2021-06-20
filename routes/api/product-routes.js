@@ -7,7 +7,7 @@ router.get("/", async (req, res) => {
       include: [{model: Category}, {model: Tag, through: ProductTag}]
     });
     if(products.length === 0) {
-      res.status(404).json({message: "No products found"});
+      res.status(404).json("No products found");
       return;
     }
     res.status(200).json(products);
@@ -117,7 +117,7 @@ router.delete("/:id", async (req, res) => {
       res.status(404).json("No product with this id");
       return;
     }
-    res.status(200).json(product);
+    res.status(200).json("Product deleted");
   }
   catch(e) {
     res.status(500).json(e.message);

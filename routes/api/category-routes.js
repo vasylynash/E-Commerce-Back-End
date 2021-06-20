@@ -52,7 +52,7 @@ router.put("/:id", async (req, res) => {
     });
     console.log(category);
     if(!category[0]){
-      res.status(404).json({message: "No category with this id"});
+      res.status(404).json("No category with this id");
       return;
     }
     const result = await Category.findByPk(req.params.id);
@@ -76,10 +76,10 @@ router.delete("/:id", async (req, res) => {
       }
     });
     if(!category) {
-      res.status(404).json({message: "No category with this id"})
+      res.status(404).json("No category with this id")
     }
     
-    res.status(200).json({message: "Category deleted"});
+    res.status(200).json("Category deleted");
   }
   catch(e) {
     res.status(500).json(e.message);
