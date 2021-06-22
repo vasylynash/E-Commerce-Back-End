@@ -21,7 +21,7 @@
   The database schema has four tables: **Category**, **Product**, **Tag** and **ProductTag**. The API:
    
   ### Categories
-  ***GET*** ```{{host}}/api/categories```: Get all categories  
+  ***GET*** ```{{host}}/api/categories``` Get all categories  
   ***GET*** ```{{host}}/api/categories/:id``` Get a category by id  
   ***POST*** ```{{host}}/api/categories``` Create a new category  
   Body: 
