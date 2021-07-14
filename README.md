@@ -2,7 +2,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
   ## Description
-  This is a simple the back end for an e-commerce site using [MySQL2](https://www.npmjs.com/package/mysql2), [Sequelize](https://www.npmjs.com/package/sequelize) and [dotenv](https://www.npmjs.com/package/dotenv) packages.
+  This is a simple back end for an e-commerce site using [MySQL2](https://www.npmjs.com/package/mysql2), [Sequelize](https://www.npmjs.com/package/sequelize) and [dotenv](https://www.npmjs.com/package/dotenv) packages.
 
   ## Table of Contents
   [Installation](#installation)  
